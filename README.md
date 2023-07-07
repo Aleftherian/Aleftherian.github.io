@@ -1,4 +1,4 @@
-# Advanced Persistent Threat :skull:
+# Advanced Persistent Threat
 
 ```
  .;coo;.                          .;:,. 
@@ -22,7 +22,7 @@
 
 Bienvenido al grupo  "Advanced Persistent Threat" (APT). Un lugar donde el conocimiento y la pasión por la ciberseguridad se unen. Nuestro objetivo es explorar el mundo de la seguridad informática desde una perspectiva ética y responsable, utilizando nuestras habilidades en el hacking para proteger y mejorar la seguridad digital. 
 
-*Reglas del Grupo:* :tophat:
+*Reglas del Grupo:*
 
 - 1. Respeto: Tratamos a todos los miembros con cortesía y consideración. Evitemos comentarios ofensivos o irrespetuosos hacia los demás.
 - 2. Colaboración: Fomentamos un ambiente de colaboración, donde compartimos conocimientos, ideas y recursos para enriquecer nuestra experiencia y habilidades en ciberseguridad.
